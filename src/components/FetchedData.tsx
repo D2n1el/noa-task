@@ -12,10 +12,12 @@ const useStyles = createUseStyles({
     '& div': {
       width: '300px',
       padding: '30px',
-      border: '1px solid hotpink',
+      backgroundColor: 'hotpink',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      color: 'white',
+      borderRadius: '16px'
     }
   }
 })
@@ -26,9 +28,9 @@ const FetchedData = (props:any) => {
   return(
 
     <div className={classes.dataBlock}>
-      <div >{props.data.name}</div>
-      <div >{props.data.descr}</div>
-      <div >{props.data.stars}</div>
+      <div >Repository name: {props.data.name}</div>
+      <div > Description: {props.data.descr}</div>
+      <div >Stars: {props.data.stars}</div>
     </div>
   )
 }
